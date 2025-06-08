@@ -1,11 +1,11 @@
-import express from "express";
+import express, { Request, Response} from "express";
 import { config } from "dotenv";
 config();
 
 const app = express();
 const PORT = process.env.PORT || 5050;
 
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to the Noire Cosmetics API.");
 });
 
